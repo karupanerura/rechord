@@ -132,24 +132,26 @@ export default class Score extends Component {
                   handleSetState={handleSetState}
                 />
               </ErrorBoundary>
-              <div className="columns play-control">
-                <div className="column">
-                  <ClickControl
-                    enabledClick={enabledClick}
-                    handleSetState={handleSetState}
-                  />
+              <div className="player-board">
+                <div className="columns play-control">
+                  <div className="column">
+                    <ClickControl
+                      enabledClick={enabledClick}
+                      handleSetState={handleSetState}
+                    />
+                  </div>
+                  <div className="column">
+                    <LoopControl
+                      loop={loop}
+                      handleSetState={handleSetState}
+                    />
+                  </div>
                 </div>
-                <div className="column">
-                  <LoopControl
-                    loop={loop}
-                    handleSetState={handleSetState}
-                  />
-                </div>
+                <VolumeControl
+                  volume={volume}
+                  handleSetState={handleSetState}
+                />
               </div>
-              <VolumeControl
-                volume={volume}
-                handleSetState={handleSetState}
-              />
             </div>
           </div>
         </div>

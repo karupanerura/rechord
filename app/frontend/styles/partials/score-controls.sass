@@ -14,35 +14,38 @@
     .field-body
       input[type=number]
         min-width: 72px
-  .play-control
-    margin-top: 0
-    margin-bottom: 0
-    .click-control, .loop-control
-      .field-body
-        .control
-          height: calc(2.25em - .3em)
-          text-align: center
-          .switch
-            left: 0
-            & + label
-              display: block
-              padding-top: 0
-              &:before
-                width: 100%
-                line-height: 2.25rem
-                font-size: 1rem
-                font-weight: bold
-                transition: all .25s ease-out
-                color: #fff
-            &:checked + label
-              &:before
-                color: #fff
-              &:after
-                left: calc(100% - 2rem)
-    .click-control .switch + label:before
-      content: "click"
-    .loop-control .switch + label:before
-      content: "loop"
+  .player-board
+    position: stickey
+    top: 1rem
+    .play-control
+      margin-top: 0
+      margin-bottom: 0
+      .click-control, .loop-control
+        .field-body
+          .control
+            height: calc(2.25em - .3em)
+            text-align: center
+            .switch
+              left: 0
+              & + label
+                display: block
+                padding-top: 0
+                &:before
+                  width: 100%
+                  line-height: 2.25rem
+                  font-size: 1rem
+                  font-weight: bold
+                  transition: all .25s ease-out
+                  color: #fff
+              &:checked + label
+                &:before
+                  color: #fff
+                &:after
+                  left: calc(100% - 2rem)
+      .click-control .switch + label:before
+        content: "click"
+      .loop-control .switch + label:before
+        content: "loop"
   .key-control, .undo-control
     > div
       flex-grow: 1
